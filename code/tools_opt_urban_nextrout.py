@@ -55,7 +55,7 @@ def run_nextrout(xplus, xminus, beta_c, niter):
         forcing_flag, grid, coord, topol, extra_info=extra_info
     )
 
-    tdpot, timefun = dmk_cont.dmk_cont(forcing_flag, beta_c, ndiv, extra_info, niter)
+    tdpot, timefun = dmk_cont.dmk_cont(forcing, beta_c, ndiv, extra_info, niter)
 
     tdens_weights = tdpot.tdens
     tdens_weights = tdens_weights / max(tdens_weights)
